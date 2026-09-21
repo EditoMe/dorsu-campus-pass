@@ -6,10 +6,10 @@ import { StudentCard } from './src/components/StudentCard';
 import { ScanCounter } from './src/components/ScanCounter';
 
 const initialStudent: StudentProfile = {
-  name: 'Edito Cleff P. Balayo',
-  idNumber: '2023-1794-MT',
+  name: 'Juan Carlos D. Dela Cruz',
+  idNumber: '2024-008492-MT',
   program: 'BS in Information Technology (BSIT)',
-  yearLevel: '3rd Year — Section G',
+  yearLevel: '3rd Year — Section A',
   avatarUrl: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=200',
   campus: 'Main Campus (Guang-guang, Mati City)',
 };
@@ -29,8 +29,13 @@ export default function App() {
         <Header />
         <StudentCard student={student} isActive={isActive} />
         <ScanCounter count={gateScans} onScan={handleScan} onReset={handleReset} />
-        <Pressable style={styles.toggleBtn} onPress={togglePassStatus}>
-          <Text style={styles.toggleBtnText}>⚠️ Simulate Pass Suspension</Text>
+        <Pressable
+          style={isActive ? styles.suspendBtn : styles.reactivateBtn}
+          onPress={togglePassStatus}
+        >
+          <Text style={isActive ? styles.suspendBtnText : styles.reactivateBtnText}>
+            {isActive ? '⚠️ Simulate Pass Suspension' : '✅ Reactivate Suspended Pass'}
+          </Text>
         </Pressable>
       </ScrollView>
     </SafeAreaView>
@@ -44,9 +49,9 @@ const styles = StyleSheet.create({
   },
   container: {
     padding: 16,
-    gap: 18,
+    gap: 16,
   },
-  toggleBtn: {
+  suspendBtn: {
     backgroundColor: '#FEE2E2',
     borderWidth: 1,
     borderColor: '#EF4444',
@@ -54,8 +59,21 @@ const styles = StyleSheet.create({
     padding: 12,
     alignItems: 'center',
   },
-  toggleBtnText: {
+  suspendBtnText: {
     color: '#B91C1C',
+    fontWeight: '700',
+    fontSize: 12,
+  },
+  reactivateBtn: {
+    backgroundColor: '#DCFCE7',
+    borderWidth: 1,
+    borderColor: '#22C55E',
+    borderRadius: 8,
+    padding: 12,
+    alignItems: 'center',
+  },
+  reactivateBtnText: {
+    color: '#15803D',
     fontWeight: '700',
     fontSize: 12,
   },
