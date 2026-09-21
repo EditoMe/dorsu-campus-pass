@@ -1,7 +1,7 @@
 # DOrSU Digital Campus Pass
 
 ITMSD 1 — Laboratory Exercise 03: React Native Fundamentals
-Fundamentals of Mobile Design and Tools — DOrSU FCET
+Fundamentals of Mobile Design and Tools — DOrSU Fagit add README.mdCET
 
 ## Overview
 
