@@ -6,10 +6,10 @@ import { StudentCard } from './src/components/StudentCard';
 import { ScanCounter } from './src/components/ScanCounter';
 
 const initialStudent: StudentProfile = {
-  name: 'Juan Carlos D. Dela Cruz',
-  idNumber: '2024-008492-MT',
+  name: 'Edito P, Balayo',
+  idNumber: '2023-1794-MT',
   program: 'BS in Information Technology (BSIT)',
-  yearLevel: '3rd Year — Section A',
+  yearLevel: '3rd Year — Section G',
   avatarUrl: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=200',
   campus: 'Main Campus (Guang-guang, Mati City)',
 };
