@@ -14,5 +14,9 @@ counter and an active/suspended status toggle.
 - Expo SDK 57
 - React 19
 - TypeScript
+## commands
+- npx expo start
 
-## Project Structure
+
+
+## Project Structure        
